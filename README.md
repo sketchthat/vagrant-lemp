@@ -5,7 +5,12 @@ Basic provision script for Vagrant 2.
 
 Will setup a base box which has Nginx config for Wordpress or Symfony apps.
 
-Clone the repo and run update the `build.sh` script - uncomment one of the following lines
+##Prerequisites
+This configuration expects you to have installed vagrant ([installing vagrant](https://www.vagrantup.com/docs/installation/))
+
+##Getting Started
+1. Clone the repo into your project root 
+2. Uncomment one of the following lines in `build.sh`
 
 ```
 # Uncomment depending on which machine you want to build
@@ -16,4 +21,4 @@ Clone the repo and run update the `build.sh` script - uncomment one of the follo
 #sudo ln -s /etc/nginx/sites-available/symfony /etc/nginx/sites-enabled/symfony
 ```
 
-`vagrant up` 
+3. Run `vagrant up`
