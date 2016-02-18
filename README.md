@@ -1,5 +1,5 @@
 # Vagrant Provisioning
-### PHP FPM, Nginx & MySQL
+### PHP 5.7 / FPM, Nginx & MySQL
 
 Basic provision script for Vagrant 2.
 

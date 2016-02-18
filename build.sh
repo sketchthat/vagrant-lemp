@@ -3,11 +3,16 @@
 echo "Provisioning machine"
 apt-get update > /dev/null
 
+echo "Adding Ondrej/php5"
+apt-get install python-software-properties -y /dev/null
+add-apt-repository ppa:ondrej/php5-5.6 -y /dev/null
+apt-get update > /dev/null
+
 echo "Installing Nginx"
 apt-get install -y nginx > /dev/null
 
-echo "Installing PHP"
-apt-get install php5-common php5-dev php5-cli php5-fpm -y > /dev/null
+echo "Installing PHP 5.6"
+apt-get install php5 php5-common php5-dev php5-cli php5-fpm -y > /dev/null
 
 echo "Installing PHP extensions"
 apt-get install curl php5-curl php5-gd php5-mcrypt php5-mysql php5-intl php-apc -y > /dev/null
