@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Removing config & install files"
-rm -Rf /config
+rm -Rf /vagrant/config
 rm /vagrant/build.sh
 rm /vagrant/composer-symfony.sh
 rm /vagrant/clean-up.sh
