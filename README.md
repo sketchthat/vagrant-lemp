@@ -14,15 +14,12 @@ This configuration expects you to have installed vagrant ([installing vagrant](h
 
 ##Getting Started
 1. Clone the repo into your project root 
-2. Uncomment one of the following lines in `build.sh`
+2. Uncomment one of the following lines in `Vagrantfile`
 
 ```
-# Uncomment depending on which machine you want to build
-#echo "Config Wordpress"
-#sudo ln -s /etc/nginx/sites-available/wordpress /etc/nginx/sites-enabled/wordpress
-
-#echo "Config Symfony"
-#sudo ln -s /etc/nginx/sites-available/symfony /etc/nginx/sites-enabled/symfony
+# Uncomment depending on which machine you want setup
+#config.vm.provision :shell, path: "wordpress.sh"
+#config.vm.provision :shell, path: "symfony.sh"
 ```
 
 3. Run `vagrant up`

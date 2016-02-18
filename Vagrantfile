@@ -16,6 +16,10 @@ Vagrant.configure(2) do |config|
   end
 
   config.vm.provision :shell, path: "build.sh"
-  config.vm.provision :shell, path: "composer-symfony.sh"
+  
+  # Uncomment depending on which machine you want setup
+  #config.vm.provision :shell, path: "wordpress.sh"
+  #config.vm.provision :shell, path: "symfony.sh"
+  
   config.vm.provision :shell, path: "clean-up.sh"
 end
