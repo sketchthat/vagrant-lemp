@@ -17,4 +17,5 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :shell, path: "build.sh"
   config.vm.provision :shell, path: "composer-symfony.sh"
+  config.vm.provision :shell, path: "clean-up.sh"
 end

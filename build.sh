@@ -50,7 +50,3 @@ php -r "unlink('composer-setup.php');"
 echo "Restarting Nginx & PHP FPM"
 service php5-fpm restart > /dev/null
 service nginx restart > /dev/null
-
-echo "Updating .gitignore"
-echo "config/" >> /vagrant/.gitignore
-echo "build.sh" >> /vagrant/.gitignore
