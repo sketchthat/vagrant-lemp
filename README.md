@@ -1,9 +1,13 @@
 # Vagrant Provisioning
-### PHP 5.7 / FPM, Nginx & MySQL
+## PHP FPM, Nginx & MySQL
 
-Basic provision script for Vagrant 2.
+Provisioning script to setup a Vagrant environment. 
 
-Will setup a base box which has Nginx config for Wordpress or Symfony apps.
+Base box `debian/wheezy64` with the following packages installed.
+
+`nginx php5 php5-common php5-dev php5-cli php5-fpm curl php5-curl php5-gd php5-mcrypt php5-mysql php5-intl mysql-server composer & symfony setup.`
+
+Optional configuration of a wordpress or symfony app nginx configuration.
 
 ##Prerequisites
 This configuration expects you to have installed vagrant ([installing vagrant](https://www.vagrantup.com/docs/installation/))
