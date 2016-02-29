@@ -27,6 +27,9 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 echo "Installing Mysql Server"
 apt-get install mysql-server -y > /dev/null
 
+echo "Installing Mysql"
+mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -ppassword  mysql
+
 echo "Config PHP Timezone & FPM Fix Path"
 echo "date.timezone = UTC" >> /etc/php5/fpm/php.ini
 echo "date.timezone = UTC" >> /etc/php5/cli/php.ini
@@ -41,6 +44,5 @@ sudo rm /etc/nginx/sites-enabled/default > /dev/null
 
 echo "Installing Composer"
 php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
-php -r "if (hash('SHA384', file_get_contents('composer-setup.php')) === 'fd26ce67e3b237fffd5e5544b45b0d92c41a4afe3e3f778e942e43ce6be197b9cdc7c251dcde6e2a52297ea269370680') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); }"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
