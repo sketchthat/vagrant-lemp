@@ -14,4 +14,4 @@ rm /vagrant/clean-up.sh
 rm /vagrant/README.md
 
 echo "Updating Vagrantfile to remove provision scripts"
-ed -s Vagrantfile <<< $'g/config.vm.provision/d\nw'
+awk '!/provision/' /vagrant/Vagrantfile > /vagrant/Vagrantfile
