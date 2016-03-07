@@ -15,3 +15,6 @@ rm /vagrant/README.md
 
 echo "Updating Vagrantfile to remove provision scripts"
 awk '!/provision/' /vagrant/Vagrantfile > /vagrant/Vagrantfile
+
+echo "Updating .gitignore with Vagrantfile"
+echo "Vagrantfile" >> /vagrant/.gitignore
