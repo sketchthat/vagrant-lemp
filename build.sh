@@ -30,7 +30,7 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 echo "Installing Mysql Server"
 apt-get install mysql-server -y > /dev/null
 
-echo "Installing Mysql"
+echo "Installing Mysql Timezone"
 mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -ppassword  mysql
 
 echo "Config PHP Timezone & FPM Fix Path"
