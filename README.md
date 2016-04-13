@@ -13,7 +13,7 @@ Optional configuration of a wordpress or symfony recipe for nginx.
 This configuration expects you to have installed vagrant ([installing vagrant](https://www.vagrantup.com/docs/installation/))
 
 ##Getting Started
-1. Clone the repo into your project root 
+1. Clone the repo contents into your project root 
 2. Uncomment one of the following lines in `Vagrantfile`
 
 ```
