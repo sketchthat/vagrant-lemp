@@ -8,6 +8,7 @@ echo "deb http://packages.dotdeb.org wheezy-php56 all" >> /etc/apt/sources.list.
 echo "deb-src http://packages.dotdeb.org wheezy-php56 all" >> /etc/apt/sources.list.d/dotdeb.list
 wget https://www.dotdeb.org/dotdeb.gpg 
 apt-key add dotdeb.gpg
+rm dotdeb.gpg
 apt-get update > /dev/null
 
 echo "Installing Nginx"
