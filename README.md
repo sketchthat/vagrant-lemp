@@ -18,8 +18,8 @@ This configuration expects you to have installed vagrant ([installing vagrant](h
 
 ```
 # Uncomment depending on which machine you want setup
-#config.vm.provision :shell, path: "wordpress.sh"
-#config.vm.provision :shell, path: "symfony.sh"
+#s.path: "vagrant-config/wordpress.sh"
+#s.path: "vagrant-config/symfony.sh"
 ```
 
 3. Run `vagrant up`

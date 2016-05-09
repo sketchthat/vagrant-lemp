@@ -18,9 +18,6 @@ apt-get install php5 php5-common php5-dev php5-cli php5-fpm -y --force-yes > /de
 echo "Installing PHP extensions"
 apt-get install curl php5-curl php5-gd php5-mcrypt php5-mysql php5-intl -y --force-yes > /dev/null
 
-echo "Installing PHP Unit"
-apt-get install phpunit -y > /dev/null
-
 echo "Installing debconf"
 apt-get install debconf-utils -y > /dev/null
 
@@ -40,8 +37,8 @@ echo "date.timezone = UTC" >> /etc/php5/cli/php.ini
 echo "cgi.fix_pathinfo=0" >> /etc/php5/fpm/php.ini
 
 echo "Config Nginx"
-sudo cp /vagrant/config/symfony_nginx /etc/nginx/sites-available/symfony > /dev/null
-sudo cp /vagrant/config/wordpress_nginx /etc/nginx/sites-available/wordpress > /dev/null
+sudo cp /vagrant/vagrant-config/nginx-config/symfony_nginx /etc/nginx/sites-available/symfony > /dev/null
+sudo cp /vagrant/vagrant-config/nginx-config/wordpress_nginx /etc/nginx/sites-available/wordpress > /dev/null
 sudo rm /etc/nginx/sites-available/default > /dev/null
 sudo rm /etc/nginx/sites-enabled/default > /dev/null
 
@@ -49,3 +46,11 @@ echo "Installing Composer"
 php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
+
+
+#echo "Installing tools for Testing & Deployment [PHPUnit, Ruby & Capistrano]"
+#gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+#curl -L https://get.rvm.io | bash -s stable --rails
+#source ~/.rvm/scripts/rvm
+#gem install capistrano
+#gem install capistrano-symfony
