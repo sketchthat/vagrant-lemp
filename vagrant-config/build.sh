@@ -45,9 +45,7 @@ sudo rm /etc/nginx/sites-available/default > /dev/null
 sudo rm /etc/nginx/sites-enabled/default > /dev/null
 
 echo "Installing Composer"
-php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
 
 #echo "Installing tools for Testing & Deployment [PHPUnit, Ruby & Capistrano]"

@@ -18,8 +18,8 @@ Vagrant.configure(2) do |config|
   config.vm.provision :shell, path: "vagrant-config/build.sh"
 
   # Uncomment depending on which machine you want setup
-  config.vm.provision :shell, path: "vagrant-config/wordpress.sh"
-  config.vm.provision :shell, path: "vagrant-config/symfony.sh"
+  # config.vm.provision :shell, path: "vagrant-config/wordpress.sh"
+  # config.vm.provision :shell, path: "vagrant-config/symfony.sh"
 
   config.vm.provision :shell, path: "vagrant-config/clean-up.sh"
 end
